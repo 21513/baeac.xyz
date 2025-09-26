@@ -2,7 +2,7 @@
 
 ##### In this article, we will explore how to create ASCII art using Blender's compositor. All realtime, so you can see the changes instantly.
 
-###### 15/06/2024
+###### 26/09/2025
 
 I have wanted to create realtime ASCII art in Blender for a while now, and I finally got around to it. The process is quite simple and involves using the compositor to convert the viewport into ASCII characters based on brightness levels. In this article I will explain my thought process of how I got to this result, and how you can do it too. There is a lot of math involved, but that is what makes it fun!
 

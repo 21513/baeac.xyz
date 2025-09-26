@@ -2,7 +2,7 @@
 
 ##### What is photogrammetry? In this article we will explain what photogrammetry is, what apps are available, and what you can scan.
 
-###### 26/09/2025
+###### 08/10/2024
 
 Photogrammetry is a technique used to create 3D meshes from photographs. It's essentially recreating a real-life object into a mesh that you can use in 3D-software. Using various algorithms and photographs from different angles of an object, the computer can analyze and figure out where certain points are in 3D-space. This results in a point cloud, which contains all the points the algorithm could figure out. After this is finished, another algorithm is applied which turns the point cloud into a 3D-mesh that is usable by all popular 3D-software. It's very simply put just a 'connect the dots' puzzle for the computer but now in 3D.
 

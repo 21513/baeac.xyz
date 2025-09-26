@@ -55,10 +55,40 @@
 
 .themeDark {
     --linkImageFilter: none;
+
+    --textColor: #f0f0f0;
+    --borderColor: #f0f0f0aa;
+    --hoverColor: #404040;
+    --accentColor: #0b910b;
+    --highlightColor: #d0d0d030;
+    --darkBackgroundColor: #101010;
+    --lightBackgroundColor: #303030;
+    --backgroundGradientDark: linear-gradient(var(--lightBackgroundColor), var(--darkBackgroundColor));
+
+    --cardBackgroundColor: #353535;
+
+    --redirectButtonColor: #f0f0f0;
+    --redirectButtonHover: #cecece;
+    --redirectButtonText: #101010;
 }
 
 .themeLight {
     --linkImageFilter: invert();
+
+    --textColor: #0f0f0f;
+    --borderColor: #0f0f0f50;
+    --hoverColor: #cacaca;
+    --accentColor: #0b910b;
+    --highlightColor: #2f2f2f30;
+    --darkBackgroundColor: #cfcfcf;
+    --lightBackgroundColor: #efefef;
+    --backgroundGradientDark: linear-gradient(var(--lightBackgroundColor), var(--darkBackgroundColor));
+
+    --cardBackgroundColor: #cacaca;
+
+    --redirectButtonColor: #0f0f0f;
+    --redirectButtonHover: #313131;
+    --redirectButtonText: #efefef;
 }
 
 * { 

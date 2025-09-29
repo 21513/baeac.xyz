@@ -106,21 +106,20 @@
     background-color: var(--accentColor);
 }
 
-body {
-    margin: 0;
-    min-height: 100vh;
-    background: var(--backgroundGradientDark);
-}
-
-img, video {user-select: none; pointer-events: none;}
+body {margin: 0; min-height: 100vh; background: var(--backgroundGradientDark);}
+img {user-select: none; pointer-events: none;}
+video {user-select: none; pointer-events: none;}
 button {all: unset; user-select: none;}
 h1 {font-size: 4rem; font-weight: 700; color: var(--textColor); text-align: center;}
 h2 {font-size: 3.5rem; font-weight: 700; color: var(--textColor); text-align: center;}
-h3 {font-size: 1.4rem; font-weight: 600; color: var(--textColor);}
+h3 {font-size: 1.8rem; font-weight: 600; color: var(--textColor); text-align: center;}
+h4 {font-size: 1.5rem; font-weight: 600; color: var(--textColor); text-align: center;}
+h5 {font-size: 1.2rem; font-weight: 500; color: var(--textColor); text-align: center;}
 h6 {font-size: 1rem; font-weight: 500; color: var(--textColor); text-align: center; margin: 1rem 0;}
 a {font-size: 1rem; color: var(--accentColor); text-decoration: none;}
 p {color: var(--textColor);}
 hr {border: none; height: var(--cardMargin);}
+ul {margin-bottom: 1rem;}
 li {color: var(--textColor); margin-bottom: 0.5rem;}
 
 .blurGradient {

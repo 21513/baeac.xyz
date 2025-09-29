@@ -12,6 +12,8 @@ There are also other methods that give similar results such as LiDAR scanning. T
 
 Choosing the right photogrammetry app for you is important for getting the best result. Mostly these apps do pretty much the same thing, but some of them have additional features that you might want to consider. These features include things like 3D gaussian splatting, AI-powered tools, object masking, etc. In this chapter we will be comparing apps and programs so you can make an educated decision in which app you will use.
 
+### KIRI Engine
+
 KIRI Engine is a photogrammetry app available for iOS and Android and is in my experience the best app for 3D-scanning on your phone. It offers great features like 3D gaussian splatting, auto object masking, texture smoothing, etc. It also allows you to upload images or videos from your local storage which is a feature I seem to be missing on a lot of other apps.
 
 ![3D scan of a wooden elephant figurine](../articles/media/photogrammetry/elephant.jpg)

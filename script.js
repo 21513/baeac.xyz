@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
     articleCards.forEach(articleCard => {
         const mdFile = articleCard.getAttribute('data-md');
         
-        fetch(`./articles/md/${mdFile}`)
+        fetch(`../articles/md/${mdFile}`)
             .then(res => res.text())
             .then(markdown => {
                 // Parse the markdown to HTML

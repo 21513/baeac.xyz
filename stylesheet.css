@@ -221,6 +221,7 @@ li {color: var(--textColor); margin-bottom: 0.5rem;}
 
 .card {
     max-width: inherit;
+    height: fit-content;
     padding: var(--cardPadding);
     border: var(--cardBorder);
     border-radius: var(--outerBorderRadius);
@@ -276,6 +277,20 @@ li {color: var(--textColor); margin-bottom: 0.5rem;}
     overflow: hidden;
 }
 
+.productCard::after{
+    content: var(--cardHoverEffect);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transform: translateY(100%);
+    background: var(--hoverGradient);
+    transition: transform var(--transitionSlow), opacity var(--transitionSlow);
+    pointer-events: none;
+    opacity: 0;
+}
+
 .articleCard {
     height: inherit;
     padding: var(--cardPadding);
@@ -292,18 +307,40 @@ li {color: var(--textColor); margin-bottom: 0.5rem;}
     overflow: hidden;
 }
 
-.productCard::after{
+.patreonBanner img {
+    width: 100%;
+    border-radius: var(--innerBorderRadius);
+}
+
+.hoverEffectHorizontal {
+    flex: 1;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    cursor: pointer;
+    transition: transform var(--transitionQuick);
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--innerBorderRadius);
+}
+
+.hoverEffectHorizontal::after {
     content: var(--cardHoverEffect);
     position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-    transform: translateY(100%);
-    background: var(--hoverGradient);
+    transform: translateX(-100%);
+    background: var(--hoverGradientHorizontal);
     transition: transform var(--transitionSlow), opacity var(--transitionSlow);
     pointer-events: none;
     opacity: 0;
+}
+
+.hoverEffectHorizontal:hover::after {
+    transform: translateX(100%);
+    opacity: 1;
 }
 
 .articleCard::after {
@@ -362,9 +399,7 @@ li {color: var(--textColor); margin-bottom: 0.5rem;}
     align-items: center;
 }
 
-.articleContent p {
-    margin-bottom: 1rem;;
-}
+
 
 .productInfo p:first-child {text-align: left; margin: 0;}
 .productInfo p:last-child {text-align: right; margin: 0;}
@@ -424,6 +459,10 @@ li {color: var(--textColor); margin-bottom: 0.5rem;}
     max-width: 100%;
     height: auto;
     border-radius: var(--innerBorderRadius);
+}
+
+.articleContent p {
+    margin-bottom: 1rem;;
 }
 
 .linkSocials {

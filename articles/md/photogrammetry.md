@@ -8,9 +8,13 @@ Photogrammetry is a technique used to create 3D meshes from photographs. It's es
 
 There are also other methods that give similar results such as LiDAR scanning. These methods don't rely on images but rather on sensors.
 
+![Photogrammetry Duck #1](../articles/media/photogrammetry/duck-1.jpg)
+
 Choosing the right photogrammetry app for you is important for getting the best result. Mostly these apps do pretty much the same thing, but some of them have additional features that you might want to consider. These features include things like 3D gaussian splatting, AI-powered tools, object masking, etc. In this chapter we will be comparing apps and programs so you can make an educated decision in which app you will use.
 
 KIRI Engine is a photogrammetry app available for iOS and Android and is in my experience the best app for 3D-scanning on your phone. It offers great features like 3D gaussian splatting, auto object masking, texture smoothing, etc. It also allows you to upload images or videos from your local storage which is a feature I seem to be missing on a lot of other apps.
+
+![3D scan of a wooden elephant figurine](../articles/media/photogrammetry/elephant.jpg)
 
 In the free version of the app you get unlimited projects, up to 100 photos, three free exports per week, and more. So you can scan whenever and whatever you want, you just can't export it immediately which is honestly one of the best free models I have seen in photogrammetry apps. You can always just preview your scans and see if you like them or not and they will be saved for you to export another week.  
 
@@ -20,7 +24,11 @@ In the paid version, which is either $17.99 per month or $79.99 per year, you ge
 
 Meshroom is a free alternative to many paid apps and instead uses your computer hardware to create the mesh and textures. The program requires an NVIDIA GPU for dense, high quality mesh generation somake sure to look at the system requirements on the Meshroom website. The recommended amount of RAM is 32GB, just so everything goes a lot quicker but you will be able to run it with less. The interface is quite intimidating but once you know what buttons to press, you shouldn't have to worry about it to much. Once you get it up and running it might take a while before your mesh is complete depending on your PC specs.
 
+![3D scan of a honeydew melon](../articles/media/photogrammetry/honeydew-melon.jpg)
+
 The best thing about computing the mesh locally is that you can have an unlimited amount of input images so you can get a lot more detail, or create a bigger object. Using more input images will, of course, make the computing time take longer but that might not be a dealbreaker for you. Make sure to try it out with a couple images first and see how you like it before throwing a lot of images at it.
+
+![3D scan of a watermelon](../articles/media/photogrammetry/watermelon.jpg)
 
 Something else you need to take into account when processing photogrammetry locally is that you do not get any of the post processing benefits from any of the paid apps. Meshroom does exactly what it needs to do, and that is create a model with textures from a series of images. Different platforms might do some image processing, AI enhancing, masking, etc. so you would have to do that manually in Meshroom. This does mean that you get full control of the post-processing step.
 
@@ -28,6 +36,8 @@ Something else you need to take into account when processing photogrammetry loca
 [Find out more on the official Meshroom website](https://alicevision.org/#meshroom)
 
 Polycam is a photogrammetry app available for iOS and Android it has great features like gaussian splatting, LiDAR scanning, photogrammetry, 360 image capture, and more. It also allows you to upload images or videos from your local storage.
+
+![3D scan of a big boulder](../articles/media/photogrammetry/rock.jpg)
 
 The free version allows you to create 5 free photogrammetry captures. You can upload up to 100 images for photogrammetry or gaussian splat captures or videos up to two minutes. The export formats are limited to only glTF in the free version and you can export the same model however many times you want.
 
@@ -52,6 +62,8 @@ Once you go outside those ten models this app becomes the most expensive one.
 
 [Find out more on the official Unreal Engine website](https://www.unrealengine.com/en-US/realityscan)
 
+## What should I scan?
+
 What you should scan really depends on what interests you. Some people like to scan their room in order to create a new floor plan, some people like gaussian splatting so they can film scenes in post instead of on set, and some people just want 3D-models of trinkets that they can use in their scenes. Here I have some ideas for you so you can get started creating what you want out of photogrammetry:
 
 ### Food
@@ -59,6 +71,8 @@ What you should scan really depends on what interests you. Some people like to s
 The power of photogrammetry lies in the objects that are organic or are really difficult to model yourself.
 This will make photogrammetry work for you so you get high quality models for very low effort.
 Some of my most productive photoscans are those of food since they are very reusable and recognizable.
+
+![3D scan of a honeydew melon](../articles/media/photogrammetry/honeydew-melon.jpg)
 
 Grab a piece of fruit, a vegetable, a nut, a piece of meat and start scanning.
 The easiest foods are those that are solid and do not deform when rotated.
@@ -74,6 +88,8 @@ They are often very useful as decoration in your 3D environments or scenes and v
 If you get lucky, you might even be able to effectively rig a scan and use it as a character.
 At the very least, you get nice and high quality decorations.
 
+![3D scan of a wooden elephant figurine](../articles/media/photogrammetry/duck-4.jpg)
+
 ### Plushies
 
 Plushies might be the last thing you think of to 3D-scan, but it might be worth it.
@@ -81,3 +97,5 @@ It's very hit-or-miss depending on the specific plushie, though.
 You want to make sure you have a pretty solid plushie that does not deform when you balance it at different angles.
 You also want to make sure that they can balance at the angles you want to use.
 I have been able to succesfully scan only one plush since most aren't really suitable.
+
+![3D scan of a plush snorlax](../articles/media/photogrammetry/snorlax-plush.jpg)

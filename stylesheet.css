@@ -3,6 +3,11 @@
     src: url("./fonts/Unageo\ Variable.ttf");
 }
 
+@font-face {
+    font-family: 'Jet Brains Mono';
+    src: url("./fonts/JetBrains\ Mono\ Variable.ttf");
+}
+
 :root {
     /* Colors */
     --textColor: #f0f0f0;
@@ -399,8 +404,6 @@ li {color: var(--textColor); margin-bottom: 0.5rem;}
     align-items: center;
 }
 
-
-
 .productInfo p:first-child {text-align: left; margin: 0;}
 .productInfo p:last-child {text-align: right; margin: 0;}
 
@@ -463,6 +466,13 @@ li {color: var(--textColor); margin-bottom: 0.5rem;}
 
 .articleContent p {
     margin-bottom: 1rem;;
+}
+
+.articleContent h3 {
+    color: var(--accentColor);
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
 }
 
 .linkSocials {

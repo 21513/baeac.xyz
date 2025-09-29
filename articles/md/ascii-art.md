@@ -40,5 +40,6 @@ You can group these nodes to reuse them a little easier, but set it up for one i
 
 And here is the final result:
 
-![ASCII Earth](../assets/images/ascii-earth.jpg)
-
+<div class="cardMedia">
+    <video src="../assets/videos/ascii-earth.webm" alt="" autoplay muted loop>
+</div>

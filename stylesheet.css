@@ -9,58 +9,40 @@
 }
 
 :root {
-    /* Colors */
-    --textColor: #f0f0f0;
-    --borderColor: #f0f0f0aa;
-    --hoverColor: #404040;
-    --accentColor: #0b910b;
-    --highlightColor: #d0d0d030;
-    --darkBackgroundColor: #101010;
-    --lightBackgroundColor: #303030;
-    --backgroundGradientDark: linear-gradient(var(--lightBackgroundColor), var(--darkBackgroundColor));
-
-    --cardBackgroundColor: #353535;
-
-    --redirectButtonColor: #f0f0f0;
-    --redirectButtonHover: #cecece;
-    --redirectButtonText: #101010;
-
-    /* Navigation */
+    /* Typography */
+    --fontWeight: 500;
+    
+    /* Layout & Spacing */
+    --cardPadding: 8px;
+    --cardMargin: 16px;
+    --columnGap: 16px;
+    --rowGap: 8px;
     --navigationButtonPadding: 8px 16px;
+    
+    /* Border Radius */
+    --edgeRounding: 2rem;
+    --innerBorderRadius: 8px;
+    --outerBorderRadius: calc(var(--innerBorderRadius) + var(--cardPadding));
+    
+    /* Borders */
     --buttonBorder: 2px solid;
-
+    --cardBorder: 1px solid #505050;
+    
+    /* Blur Effects */
     --blurRadius: 16px;
     --blurGradient: linear-gradient(#000000ff 0%, #000000bb 50%, #00000000 100%);
     --blurGradientHeight: calc(var(--blurRadius) * 4);
-
-    /* Cards */
-    --cardPadding: 8px;
-    --cardMargin: 16px;
-    --cardBorder: 1px solid #505050;
-    
-    --edgeRounding: 2rem;
-    
-    --innerBorderRadius: 8px;
-    --outerBorderRadius: calc(var(--innerBorderRadius) + var(--cardPadding));
-
-    /* General */
-    --fontWeight: 500;
-    --columnGap: 16px;
-    --rowGap: 8px;
     
     /* Transitions */
     --transitionQuick: 200ms ease;
     --transitionSlow: 400ms ease;
     
-    /* Card */
+    /* Hover Effects */
     --cardHoverEffect: '';
     --hoverGradient: linear-gradient(transparent, var(--highlightColor) 45%, var(--highlightColor) 55%, transparent);
     --hoverGradientHorizontal: linear-gradient(90deg, transparent, var(--highlightColor) 45%, var(--highlightColor) 55%, transparent);
-}
-
-.themeDark {
-    --linkImageFilter: none;
-
+    
+    /* Colors - Default (Dark Theme) */
     --textColor: #f0f0f0;
     --borderColor: #f0f0f0aa;
     --hoverColor: #404040;
@@ -69,9 +51,24 @@
     --darkBackgroundColor: #101010;
     --lightBackgroundColor: #303030;
     --backgroundGradientDark: linear-gradient(var(--lightBackgroundColor), var(--darkBackgroundColor));
-
     --cardBackgroundColor: #353535;
+    --redirectButtonColor: #f0f0f0;
+    --redirectButtonHover: #cecece;
+    --redirectButtonText: #101010;
+    --linkImageFilter: none;
+}
 
+.themeDark {
+    --linkImageFilter: none;
+    --textColor: #f0f0f0;
+    --borderColor: #f0f0f0aa;
+    --hoverColor: #404040;
+    --accentColor: #0b910b;
+    --highlightColor: #d0d0d030;
+    --darkBackgroundColor: #101010;
+    --lightBackgroundColor: #303030;
+    --backgroundGradientDark: linear-gradient(var(--lightBackgroundColor), var(--darkBackgroundColor));
+    --cardBackgroundColor: #353535;
     --redirectButtonColor: #f0f0f0;
     --redirectButtonHover: #cecece;
     --redirectButtonText: #101010;
@@ -79,7 +76,6 @@
 
 .themeLight {
     --linkImageFilter: invert();
-
     --textColor: #0f0f0f;
     --borderColor: #0f0f0f50;
     --hoverColor: #cacaca;
@@ -88,9 +84,7 @@
     --darkBackgroundColor: #cfcfcf;
     --lightBackgroundColor: #efefef;
     --backgroundGradientDark: linear-gradient(var(--lightBackgroundColor), var(--darkBackgroundColor));
-
     --cardBackgroundColor: #cacaca;
-
     --redirectButtonColor: #0f0f0f;
     --redirectButtonHover: #313131;
     --redirectButtonText: #efefef;
@@ -106,21 +100,52 @@
     background-color: var(--accentColor);
 }
 
-body {margin: 0; min-height: 100vh; background: var(--backgroundGradientDark);}
-img {user-select: none; pointer-events: none;}
-video {user-select: none; pointer-events: none;}
-button {all: unset; user-select: none;}
+body {
+    margin: 0; 
+    min-height: 100vh; 
+    background: var(--backgroundGradientDark);
+}
+
+img, video {
+    user-select: none; 
+    pointer-events: none;
+}
+
+button {
+    all: unset; 
+    user-select: none;
+}
+
+hr {
+    border: none; 
+    height: var(--cardMargin);
+}
+
 h1 {font-size: 4rem; font-weight: 700; color: var(--textColor); text-align: center;}
 h2 {font-size: 3.5rem; font-weight: 700; color: var(--textColor); text-align: center;}
 h3 {font-size: 1.8rem; font-weight: 600; color: var(--textColor);}
 h4 {font-size: 1.5rem; font-weight: 600; color: var(--textColor); text-align: center;}
 h5 {font-size: 1.2rem; font-weight: 500; color: var(--textColor); text-align: center;}
 h6 {font-size: 1rem; font-weight: 500; color: var(--textColor); text-align: center; margin: 1rem 0;}
-a {font-size: 1rem; color: var(--accentColor); text-decoration: none;}
-p {color: var(--textColor);}
-hr {border: none; height: var(--cardMargin);}
-ul {margin-bottom: 1rem;}
-li {color: var(--textColor); margin-bottom: 0.5rem;}
+
+a {
+    font-size: 1rem; 
+    color: var(--accentColor); 
+    text-decoration: none;
+}
+
+p {
+    color: var(--textColor);
+}
+
+ul {
+    margin-bottom: 1rem;
+}
+
+li {
+    color: var(--textColor); 
+    margin-bottom: 0.5rem;
+}
 
 .blurGradient {
     position: fixed;
@@ -128,9 +153,7 @@ li {color: var(--textColor); margin-bottom: 0.5rem;}
     height: var(--blurGradientHeight);
     box-sizing: border-box;
     width: 100%;
-
     z-index: 1;
-
     backdrop-filter: blur(var(--blurRadius));
     mask-image: var(--blurGradient);
 }
@@ -138,7 +161,6 @@ li {color: var(--textColor); margin-bottom: 0.5rem;}
 .navigation {
     position: sticky;
     top: 0;
-
     display: flex;
     justify-content: center;
     padding: 8px;
@@ -164,7 +186,6 @@ li {color: var(--textColor); margin-bottom: 0.5rem;}
     color: var(--textColor);
     scale: 1.0;
     transition: var(--transitionQuick);
-
     user-select: none;
 }
 
@@ -187,6 +208,25 @@ li {color: var(--textColor); margin-bottom: 0.5rem;}
     vertical-align: middle;
 }
 
+.siteNavigation {
+    width: 12vw;
+    display: grid;
+    padding: 8px;
+    border: var(--cardBorder);
+    border-radius: var(--outerBorderRadius);
+    background: var(--cardBackgroundColor);
+    gap: 4px;
+    overflow: hidden;
+}
+
+.siteNavigation a {
+    padding: var(--cardPadding);
+    background-color: var(--hoverColor);
+    border: var(--cardBorder);
+    border-radius: var(--innerBorderRadius);
+    text-decoration: none;
+    color: var(--textColor);
+}
 .page {
     display: flex;
     width: 100%;
@@ -201,30 +241,22 @@ li {color: var(--textColor); margin-bottom: 0.5rem;}
 .column {
     flex: 0 1 auto;
     max-width: 50vw;
-
     display: grid;
     justify-content: center;
-
     gap: var(--columnGap);
+}
+
+.row {
+    width: 90vw;
+    display: flex;
+    justify-content: center;
+    gap: var(--rowGap);
 }
 
 .articles {
     display: grid;
     height: fit-content;
     gap: var(--columnGap);
-}
-
-.articleContent h3 {
-    text-align: center;
-}
-
-.row {
-    width: 90vw;
-    
-    display: flex;
-    justify-content: center;
-    
-    gap: var(--rowGap);
 }
 
 .card {
@@ -236,40 +268,7 @@ li {color: var(--textColor); margin-bottom: 0.5rem;}
     background-color: var(--cardBackgroundColor);
 }
 
-.products {
-    display: flex;
-    max-width: inherit;
-    gap: 8px;
-}
-
-.productMedia img, .productMedia video {
-    width: 100%;
-    aspect-ratio: 1 / 1;
-    object-fit: cover;
-    border-radius: var(--innerBorderRadius);
-}
-
-.productMedia img:hover {
-    transition: var(--transitionQuick);
-}
-
-.articleCard {
-    display: flex;
-    max-width: inherit;
-    padding: var(--cardPadding);
-    border: var(--cardBorder);
-    border-radius: var(--outerBorderRadius);
-    background-color: var(--cardBackgroundColor);
-    gap: var(--rowGap);
-}
-
-.articleCard img {
-    height: 128px;
-    object-fit: cover;
-    border-radius: var(--innerBorderRadius);
-}
-
-.productCard {
+.productCard, .articleCard {
     height: inherit;
     padding: var(--cardPadding);
     border: var(--cardBorder);
@@ -278,14 +277,22 @@ li {color: var(--textColor); margin-bottom: 0.5rem;}
     flex: 1;
     text-decoration: none;
     color: inherit;
-    display: block;
     cursor: pointer;
     transition: transform var(--transitionQuick);
     position: relative;
     overflow: hidden;
 }
 
-.productCard::after{
+.productCard {
+    display: block;
+}
+
+.articleCard {
+    display: flex;
+    gap: var(--rowGap);
+}
+
+.productCard::after {
     content: var(--cardHoverEffect);
     position: absolute;
     top: 0;
@@ -299,32 +306,117 @@ li {color: var(--textColor); margin-bottom: 0.5rem;}
     opacity: 0;
 }
 
-.articleCard {
-    height: inherit;
+.articleCard::after {
+    content: var(--cardHoverEffect);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transform: translateX(-100%);
+    background: var(--hoverGradientHorizontal);
+    transition: transform var(--transitionSlow), opacity var(--transitionSlow);
+    pointer-events: none;
+    opacity: 0;
+}
+
+.productCard:hover, .articleCard:hover {
+    transform: translateY(-4px);
+}
+
+.productCard:hover::after {
+    transform: translateY(-100%);
+    opacity: 1;
+}
+
+.articleCard:hover::after {
+    transform: translateX(100%);
+    opacity: 1;
+}
+
+.cardMedia img, .cardMedia video {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: var(--innerBorderRadius);
+}
+
+.productCard .cardMedia img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: var(--innerBorderRadius);
+}
+
+.productMedia img, .productMedia video {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: var(--innerBorderRadius);
+}
+
+.productMedia img:hover {
+    transition: var(--transitionQuick);
+}
+
+.articleCard img {
+    height: 128px;
+    object-fit: cover;
+    border-radius: var(--innerBorderRadius);
+}
+
+.cardInfo, .productInfo, .articleInfo {
+    color: var(--textColor);
     padding: var(--cardPadding);
-    border: var(--cardBorder);
-    border-radius: var(--outerBorderRadius);
-    background-color: var(--cardBackgroundColor);
-    flex: 1;
-    text-decoration: none;
-    color: inherit;
     display: flex;
-    cursor: pointer;
-    transition: transform var(--transitionQuick);
-    position: relative;
-    overflow: hidden;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.productInfo {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.productInfo p:first-child {text-align: left; margin: 0;}
+.productInfo p:last-child {text-align: right; margin: 0;}
+
+.articleInfo {
+    gap: 8px;
+}
+
+.articleDate {
+    font-size: 0.875rem;
+    color: var(--dimTextColor);
+    font-style: italic;
+    margin: 0 !important;
+}
+
+.products {
+    display: flex;
+    max-width: inherit;
+    gap: 8px;
+}
+
+.redirectButton {
+    background-color: var(--redirectButtonColor);
+    color: var(--redirectButtonText);
+    text-decoration: none;
+    text-align: center;
+    border: var(--buttonBorder) transparent;
+    border-radius: var(--edgeRounding);
+    padding: 8px;
+    transition: var(--transitionQuick);
+}
+
+.redirectButton:hover {
+    background-color: var(--redirectButtonHover);
+    transition: var(--transitionQuick);
 }
 
 .hoverEffectHorizontal {
     margin-top: calc(var(--columnGap) / 2);
-}
-
-.patreonBanner img {
-    width: 100%;
-    border-radius: var(--innerBorderRadius);
-}
-
-.hoverEffectHorizontal {
     flex: 1;
     text-decoration: none;
     color: inherit;
@@ -355,131 +447,9 @@ li {color: var(--textColor); margin-bottom: 0.5rem;}
     opacity: 1;
 }
 
-.articleCard::after {
-    content: var(--cardHoverEffect);
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    transform: translateX(-100%);
-    background: var(--hoverGradientHorizontal);
-    transition: transform var(--transitionSlow), opacity var(--transitionSlow);
-    pointer-events: none;
-    opacity: 0;
-}
-
-.productCard:hover, .articleCard:hover {
-    transform: translateY(-4px);
-}
-
-.productCard:hover::after{
-    transform: translateY(-100%);
-    opacity: 1;
-}
-
-.articleCard:hover::after {
-    transform: translateX(100%);
-    opacity: 1;
-}
-
-.productCard .cardMedia img {
+.patreonBanner img {
     width: 100%;
-    aspect-ratio: 1 / 1;
-    object-fit: cover;
     border-radius: var(--innerBorderRadius);
-}
-
-.cardMedia img, .cardMedia video {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    border-radius: var(--innerBorderRadius);
-}
-
-.cardInfo, .productInfo {
-    color: var(--textColor);
-    padding: var(--cardPadding);
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-}
-
-.productInfo {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.productInfo p:first-child {text-align: left; margin: 0;}
-.productInfo p:last-child {text-align: right; margin: 0;}
-
-.articleInfo {
-    color: var(--textColor);
-    padding: var(--cardPadding);
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-
-.articleDate {
-    font-size: 0.875rem;
-    color: var(--dimTextColor);
-    font-style: italic;
-    margin: 0 !important;
-}
-
-.redirectButton {
-    background-color: var(--redirectButtonColor);
-    color: var(--redirectButtonText);
-    text-decoration: none;
-    text-align: center;
-    border: var(--buttonBorder) transparent;
-    border-radius: var(--edgeRounding);
-    padding: 8px;
-    transition: var(--transitionQuick);
-}
-
-.redirectButton:hover {
-    background-color: var(--redirectButtonHover);
-    transition: var(--transitionQuick);
-}
-
-.siteNavigation {
-    width: 12vw;
-    display: grid;
-    padding: 8px;
-    border: var(--cardBorder);
-    border-radius: var(--outerBorderRadius);
-    background: var(--cardBackgroundColor);
-    gap: 4px;
-    overflow: hidden;
-}
-
-.siteNavigation a {
-    padding: var(--cardPadding);
-    background-color: var(--hoverColor);
-    border: var(--cardBorder);
-    border-radius: var(--innerBorderRadius);
-    text-decoration: none;
-    color: var(--textColor);
-}
-
-.articleContent img {
-    max-width: 100%;
-    height: auto;
-    border-radius: var(--innerBorderRadius);
-}
-
-.articleContent p {
-    margin-bottom: 1rem;;
-}
-
-.articleContent h3 {
-    color: var(--accentColor);
-    font-size: 1.5rem;
-    margin-top: 2rem;
-    margin-bottom: 0.5rem;
 }
 
 .linkSocials {
@@ -495,6 +465,24 @@ li {color: var(--textColor); margin-bottom: 0.5rem;}
 .linkImage {
     height: 32px;
     filter: var(--linkImageFilter);
+}
+
+.articleContent h3 {
+    color: var(--accentColor);
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.articleContent img {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--innerBorderRadius);
+}
+
+.articleContent p {
+    margin-bottom: 1rem;
 }
 
 .footer {

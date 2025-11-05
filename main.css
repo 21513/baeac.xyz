@@ -195,6 +195,11 @@ li {
     user-select: none;
 }
 
+.navigationButton img {
+    height: 24px;
+    width: 24px;
+}
+
 .navigationButton:hover {
     background-color: var(--hoverColor);
     border: var(--buttonBorder) var(--borderColor);
@@ -206,6 +211,11 @@ li {
 .siteSettings {
     position: absolute;
     right: 16px;
+}
+
+.scrollToTop {
+    position: absolute;
+    left: 16px;
 }
 
 #themeToggle.material-icons {

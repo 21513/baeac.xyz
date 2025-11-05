@@ -4,9 +4,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const updateIcon = () => {
         if (bodyElement.classList.contains('themeDark')) {
-            themeToggleButton.textContent = 'dark_mode';
+            themeToggleButton.innerHTML = '<img src="./assets/moon.svg" alt="">';
         } else {
-            themeToggleButton.textContent = 'light_mode';
+            themeToggleButton.innerHTML = '<img src="./assets/sun.svg" alt="">';
         }
     };
 
@@ -16,11 +16,11 @@ document.addEventListener('DOMContentLoaded', () => {
         if (bodyElement.classList.contains('themeDark')) {
             bodyElement.classList.remove('themeDark');
             bodyElement.classList.add('themeLight');
-            themeToggleButton.innerHTML = 'dark_mode';
+            themeToggleButton.innerHTML = '<img src="./assets/sun.svg" alt="">';
         } else {
             bodyElement.classList.remove('themeLight');
             bodyElement.classList.add('themeDark');
-            themeToggleButton.innerHTML = 'light_mode';
+            themeToggleButton.innerHTML = '<img src="./assets/moon.svg" alt="">';
         }
         updateIcon();
     });

@@ -47,6 +47,7 @@
     --borderColor: #f0f0f0aa;
     --hoverColor: #404040;
     --accentColor: #0b910b;
+    --limeColor: #56e01f;
     --highlightColor: #d0d0d030;
     --darkBackgroundColor: #101010;
     --lightBackgroundColor: #303030;
@@ -94,6 +95,11 @@
     margin: 0;
     font-family: "Unageo", sans-serif;
     font-weight: var(--fontWeight);
+}
+
+.landingPage {
+    width: 100vw;
+    height: calc(100vh - 64px);
 }
 
 ::selection {

@@ -4,7 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>baeac.xyz</title>
 
-    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="main.css">
     <link rel="icon" type="image/x-icon" href="./icons/favicon.ico">
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -12,6 +12,18 @@
 
     <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.165.0/build/three.module.js",
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.165.0/examples/jsm/"
+        }
+    }
+    </script>
+
+    <script type="module" src="main.js"></script>
+    <script type="module" src="modules/navigation.js"></script>
 </head>
 
 <body class="themeDark">
@@ -28,6 +40,10 @@
                 light_mode
             </button>
         </div>
+    </div>
+
+    <div class="landingPage">
+        <div class="viewer3D" id="three_js"></div>
     </div>
 
     <div class="page">

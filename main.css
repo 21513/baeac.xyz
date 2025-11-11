@@ -225,6 +225,10 @@ li {
 }
 
 .siteNavigation {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    scale: 1.1;
     width: 12vw;
     display: grid;
     padding: 8px;

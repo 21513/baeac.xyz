@@ -64,6 +64,7 @@
 
 .themeDark {
     --linkImageFilter: none;
+    --iconFilter: none;
     --textColor: #f0f0f0;
     --borderColor: #f0f0f0aa;
     --hoverColor: #404040;
@@ -80,6 +81,7 @@
 
 .themeLight {
     --linkImageFilter: invert();
+    --iconFilter: invert();
     --textColor: #0f0f0f;
     --borderColor: #0f0f0f50;
     --hoverColor: #cacaca;
@@ -212,6 +214,7 @@ hr { border: none;  height: var(--cardMargin); }
 .scrollButton img {
     width: var(--navigationIcon);
     height: var(--navigationIcon);
+    filter: var(--iconFilter);
 }
 
 /* div .navigationBar */
@@ -245,6 +248,7 @@ hr { border: none;  height: var(--cardMargin); }
 .navigationButton img {
     height: var(--navigationIcon);
     width: var(--navigationIcon);
+    filter: var(--iconFilter);
 }
 
 .navigationButton:hover {

@@ -182,7 +182,11 @@ li {
     gap: 8px;
 }
 
-.navigationButton {
+.scrollButton {
+    opacity: 0;
+}
+
+.navigationButton, .scrollButton {
     padding: var(--navigationButtonPadding);
     margin: 4px;
     background-color: var(--darkBackgroundColor);
@@ -195,12 +199,12 @@ li {
     user-select: none;
 }
 
-.navigationButton img {
+.navigationButton img, .scrollButton img {
     height: 24px;
     width: 24px;
 }
 
-.navigationButton:hover {
+.navigationButton:hover, .scrollButton:hover {
     background-color: var(--hoverColor);
     border: var(--buttonBorder) var(--borderColor);
     scale: 1.08;
@@ -216,6 +220,12 @@ li {
 .scrollToTop {
     position: absolute;
     left: 16px;
+}
+
+.scrollButton {
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
 #themeToggle.material-icons {

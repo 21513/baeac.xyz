@@ -18,6 +18,8 @@
     --columnGap: 16px;
     --rowGap: 8px;
     --navigationButtonPadding: 8px 16px;
+
+    --navigationIcon: 20px;
     
     /* Border Radius */
     --edgeRounding: 2rem;
@@ -122,36 +124,22 @@ button {
     user-select: none;
 }
 
-hr {
-    border: none; 
-    height: var(--cardMargin);
-}
-
 h1 {font-size: 4rem; font-weight: 700; color: var(--textColor); text-align: center;}
 h2 {font-size: 3.5rem; font-weight: 700; color: var(--textColor); text-align: center;}
 h3 {font-size: 1.8rem; font-weight: 600; color: var(--textColor);}
 h4 {font-size: 1.5rem; font-weight: 600; color: var(--textColor); text-align: center;}
 h5 {font-size: 1.2rem; font-weight: 500; color: var(--textColor); text-align: center;}
 h6 {font-size: 1rem; font-weight: 500; color: var(--textColor); text-align: center; margin: 1rem 0;}
+a { font-size: 1rem; color: var(--accentColor); text-decoration: none; }
+p { color: var(--textColor); }
+ul { margin-bottom: 1rem; }
+ol { margin-bottom: 1rem; }
+li { color: var(--textColor); margin-bottom: 0.5rem; }
+hr { border: none;  height: var(--cardMargin); }
 
-a {
-    font-size: 1rem; 
-    color: var(--accentColor); 
-    text-decoration: none;
-}
+/* Navigation */
 
-p {
-    color: var(--textColor);
-}
-
-ul {
-    margin-bottom: 1rem;
-}
-
-li {
-    color: var(--textColor); 
-    margin-bottom: 0.5rem;
-}
+/* <div .blurGradient></div> */
 
 .blurGradient {
     position: fixed;
@@ -162,6 +150,49 @@ li {
     z-index: 1;
     backdrop-filter: blur(var(--blurRadius));
     mask-image: var(--blurGradient);
+}
+
+/* <div .scrollToTop> */
+/*     <div .scrollButton> */
+/*         <img> */
+/*         <p> */
+/*     </div> */
+/* </div> */
+
+.scrollToTop {
+    position: absolute;
+    left: 16px;
+}
+
+.scrollButton {
+    opacity: 0;
+    pointer-events: none;
+    padding: var(--navigationButtonPadding);
+    margin: 4px;
+    background-color: var(--darkBackgroundColor);
+    border: var(--buttonBorder) transparent;
+    border-radius: var(--edgeRounding);
+    text-decoration: none;
+    color: var(--textColor);
+    scale: 1.0;
+    transition: var(--transitionQuick);
+    user-select: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.scrollButton:hover {
+    background-color: var(--hoverColor);
+    border: var(--buttonBorder) var(--borderColor);
+    scale: 1.08;
+    transition: var(--transitionQuick);
+    cursor: pointer;
+}
+
+.scrollButton img {
+    height: var(--navigationIcon);
+    width: var(--navigationIcon);
 }
 
 .navigation {
@@ -182,11 +213,7 @@ li {
     gap: 8px;
 }
 
-.scrollButton {
-    opacity: 0;
-}
-
-.navigationButton, .scrollButton {
+.navigationButton {
     padding: var(--navigationButtonPadding);
     margin: 4px;
     background-color: var(--darkBackgroundColor);
@@ -199,12 +226,12 @@ li {
     user-select: none;
 }
 
-.navigationButton img, .scrollButton img {
-    height: 24px;
-    width: 24px;
+.navigationButton img {
+    height: var(--navigationIcon);
+    width: var(--navigationIcon);
 }
 
-.navigationButton:hover, .scrollButton:hover {
+.navigationButton:hover {
     background-color: var(--hoverColor);
     border: var(--buttonBorder) var(--borderColor);
     scale: 1.08;
@@ -215,17 +242,6 @@ li {
 .siteSettings {
     position: absolute;
     right: 16px;
-}
-
-.scrollToTop {
-    position: absolute;
-    left: 16px;
-}
-
-.scrollButton {
-    display: flex;
-    align-items: center;
-    gap: 8px;
 }
 
 #themeToggle.material-icons {

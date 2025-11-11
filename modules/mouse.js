@@ -1,6 +1,5 @@
 export let mouseHorizontal = 0;
 export let mouseVertical = 0;
-
 export let scrollAmount = 0;
 
 export function mouseLocation(event) {
@@ -21,7 +20,7 @@ export function scrollLocation(event) {
     scrollAmount = window.scrollY;
 }
 
-export function socialsFollowScroll(event) {
+export function scrollSocialsCard(event) {
     const socialsCard = document.getElementById('socials_card');
 
     const navigationHeight = document.getElementById('top_navigation').clientHeight;

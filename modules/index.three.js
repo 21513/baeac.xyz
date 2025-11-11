@@ -8,6 +8,11 @@ const mouseMoveIntensity = 0.01;
 const model = './assets/models/head.glb';
 const hdri = './assets/images/hdr/environment.hdr';
 
+// Idle animation parameters
+const idleIntensity = 0.02; // How much the object rotates
+const idleSpeed = 0.001; // How fast the idle animation is
+const randomOffset = Math.random() * Math.PI * 2; // Random starting point
+
 export function setupThreeJS() {
     const scene = new THREE.Scene();
 
@@ -47,12 +52,24 @@ export function setupThreeJS() {
     const animate = () => {
         requestAnimationFrame(animate);
         
+        // Get current time for smooth animation
+        const time = Date.now();
+        
         camera.rotation.y = mouseHorizontal * mouseMoveIntensity;
         camera.rotation.x = mouseVertical * mouseMoveIntensity;
 
         const loadedModel = scene.children.find(child => child.type === 'Group');
         if (loadedModel) {
-            loadedModel.rotation.y = scrollAmount * -0.001;
+            const scrollRotation = Math.sign(scrollAmount) * Math.pow(Math.abs(scrollAmount), 1.2) * -0.001;
+            
+            const idleRotationY = Math.sin(time * idleSpeed + randomOffset) * idleIntensity;
+            const idleRotationX = Math.cos(time * idleSpeed * 0.7 + randomOffset + 1.5) * idleIntensity * 0.5;
+            const idleRotationZ = Math.sin(time * idleSpeed * 1.3 + randomOffset + 3) * idleIntensity * 0.3;
+            
+            loadedModel.rotation.y = scrollRotation + idleRotationY;
+            loadedModel.rotation.x = idleRotationX;
+            loadedModel.rotation.z = idleRotationZ;
+            
             loadedModel.position.z = scrollAmount * -0.01;
         }
         

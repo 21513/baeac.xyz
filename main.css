@@ -577,4 +577,16 @@ hr { border: none;  height: var(--cardMargin); }
     .column {
         max-width: 90vw;
     }
+
+    .scrollToTop { display: none; }
+
+    .navigationBar {
+        width: 90vw;
+        position: fixed;
+        bottom: 16px;
+        background-color: var(--darkBackgroundColor);
+        padding: var(--cardPadding);
+        border: var(--cardBorder);
+        border-radius: var(--edgeRounding);
+    }
 }

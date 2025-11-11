@@ -2,8 +2,19 @@ document.addEventListener('DOMContentLoaded', () => {
     const themeToggleButton = document.getElementById('themeToggle');
     const bodyElement = document.body;
 
+    const setDefaultTheme = () => {
+        if (!localStorage.getItem('theme')) {
+            localStorage.setItem('theme', 'themeDark');
+            bodyElement.classList.add('themeDark');
+        } else {
+            bodyElement.classList.add(localStorage.getItem('theme'));
+        }
+    };
+
+    setDefaultTheme();
+
     const updateIcon = () => {
-        if (bodyElement.classList.contains('themeDark')) {
+        if (localStorage.getItem('theme') === 'themeDark') {
             themeToggleButton.innerHTML = '<img src="./assets/moon.svg" alt="">';
         } else {
             themeToggleButton.innerHTML = '<img src="./assets/sun.svg" alt="">';
@@ -13,14 +24,14 @@ document.addEventListener('DOMContentLoaded', () => {
     updateIcon();
 
     themeToggleButton.addEventListener('click', () => {
-        if (bodyElement.classList.contains('themeDark')) {
+        if (localStorage.getItem('theme') === 'themeDark') {
             bodyElement.classList.remove('themeDark');
             bodyElement.classList.add('themeLight');
-            themeToggleButton.innerHTML = '<img src="./assets/sun.svg" alt="">';
+            localStorage.setItem('theme', 'themeLight');
         } else {
             bodyElement.classList.remove('themeLight');
             bodyElement.classList.add('themeDark');
-            themeToggleButton.innerHTML = '<img src="./assets/moon.svg" alt="">';
+            localStorage.setItem('theme', 'themeDark');
         }
         updateIcon();
     });

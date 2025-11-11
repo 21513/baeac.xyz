@@ -52,6 +52,7 @@
     --limeColor: #56e01f;
     --highlightColor: #d0d0d030;
     --darkBackgroundColor: #101010;
+    --grayBackgroundColor: #202020;
     --lightBackgroundColor: #303030;
     --backgroundGradientDark: linear-gradient(var(--lightBackgroundColor), var(--darkBackgroundColor));
     --cardBackgroundColor: #353535;
@@ -137,63 +138,7 @@ ol { margin-bottom: 1rem; }
 li { color: var(--textColor); margin-bottom: 0.5rem; }
 hr { border: none;  height: var(--cardMargin); }
 
-/* Navigation */
-
-/* <div .blurGradient></div> */
-
-.blurGradient {
-    position: fixed;
-    top: 0;
-    height: var(--blurGradientHeight);
-    box-sizing: border-box;
-    width: 100%;
-    z-index: 1;
-    backdrop-filter: blur(var(--blurRadius));
-    mask-image: var(--blurGradient);
-}
-
-/* <div .scrollToTop> */
-/*     <div .scrollButton> */
-/*         <img> */
-/*         <p> */
-/*     </div> */
-/* </div> */
-
-.scrollToTop {
-    position: absolute;
-    left: 16px;
-}
-
-.scrollButton {
-    opacity: 0;
-    pointer-events: none;
-    padding: var(--navigationButtonPadding);
-    margin: 4px;
-    background-color: var(--darkBackgroundColor);
-    border: var(--buttonBorder) transparent;
-    border-radius: var(--edgeRounding);
-    text-decoration: none;
-    color: var(--textColor);
-    scale: 1.0;
-    transition: var(--transitionQuick);
-    user-select: none;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.scrollButton:hover {
-    background-color: var(--hoverColor);
-    border: var(--buttonBorder) var(--borderColor);
-    scale: 1.08;
-    transition: var(--transitionQuick);
-    cursor: pointer;
-}
-
-.scrollButton img {
-    height: var(--navigationIcon);
-    width: var(--navigationIcon);
-}
+/* .navigation */
 
 .navigation {
     position: sticky;
@@ -206,24 +151,95 @@ hr { border: none;  height: var(--cardMargin); }
     z-index: 2;
 }
 
+/* <div .blurGradient> */
+
+.blurGradient {
+    position: fixed;
+    top: 0;
+    height: var(--blurGradientHeight);
+    box-sizing: border-box;
+    width: 100%;
+    z-index: 1;
+    backdrop-filter: blur(var(--blurRadius));
+    mask-image: var(--blurGradient);
+}
+
+/* div .scrollToTop      */
+/*     div .scrollButton */
+/*         img           */
+/*         p             */
+
+.scrollToTop {
+    position: absolute;
+    left: 16px;
+}
+
+.scrollButton {
+    display: flex;
+    align-items: center;
+
+    margin: 4px;
+    padding: var(--navigationButtonPadding);
+    gap: 8px;
+
+    background-color: var(--darkBackgroundColor);
+    color: var(--textColor);
+
+    border: var(--buttonBorder) transparent;
+    border-radius: var(--edgeRounding);
+    text-decoration: none;
+    
+    opacity: 0;
+    
+    user-select: none;
+    pointer-events: none;
+    
+    scale: 1.0;
+    transition: var(--transitionQuick);
+}
+
+.scrollButton:hover {
+    background-color: var(--hoverColor);
+    
+    border: var(--buttonBorder) var(--borderColor);
+    
+    cursor: pointer;
+    
+    scale: 1.08;
+    transition: var(--transitionQuick);
+}
+
+.scrollButton img {
+    width: var(--navigationIcon);
+    height: var(--navigationIcon);
+}
+
+/* div .navigationBar */
+/*     div .navigationButton */
+
 .navigationBar {
     display: flex;
     justify-content: center;
     align-items: center;
+
     gap: 8px;
 }
 
 .navigationButton {
-    padding: var(--navigationButtonPadding);
     margin: 4px;
+    padding: var(--navigationButtonPadding);
+    
+    color: var(--textColor);
     background-color: var(--darkBackgroundColor);
+    
     border: var(--buttonBorder) transparent;
     border-radius: var(--edgeRounding);
     text-decoration: none;
-    color: var(--textColor);
+    
+    user-select: none;
+    
     scale: 1.0;
     transition: var(--transitionQuick);
-    user-select: none;
 }
 
 .navigationButton img {
@@ -233,10 +249,13 @@ hr { border: none;  height: var(--cardMargin); }
 
 .navigationButton:hover {
     background-color: var(--hoverColor);
+    
     border: var(--buttonBorder) var(--borderColor);
+    
+    cursor: pointer;
+    
     scale: 1.08;
     transition: var(--transitionQuick);
-    cursor: pointer;
 }
 
 .siteSettings {

@@ -13,6 +13,11 @@ const idleIntensity = 0.02; // How much the object rotates
 const idleSpeed = 0.001; // How fast the idle animation is
 const randomOffset = Math.random() * Math.PI * 2; // Random starting point
 
+// Click interaction parameters
+let isClicked = false;
+let clickAnimationTime = 0;
+const clickAnimationDuration = 1000; // 1 second
+
 export function setupThreeJS() {
     const scene = new THREE.Scene();
 
@@ -24,6 +29,11 @@ export function setupThreeJS() {
 
     const container = document.getElementById('three_js');
     container.appendChild(renderer.domElement);
+
+    // Raycaster for click detection
+    const raycaster = new THREE.Raycaster();
+    const mouse = new THREE.Vector2();
+    let loadedModel = null;
 
     const rgbeLoader = new RGBELoader();
     rgbeLoader.load(hdri, (texture) => {

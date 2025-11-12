@@ -29,9 +29,8 @@ export function toggleScrollButton() {
 export function toggleViewerMessage() {
     const viewerHello = document.querySelector('.viewerGreeting');
     const viewerScroll = document.querySelector('.viewerScroll');
-    const windowHeight = window.innerHeight;
     
-    if (window.scrollY > 200) {
+    if (window.scrollY > 160) {
         viewerScroll.style.display = 'grid';
         viewerHello.style.display = 'none';
     } else {

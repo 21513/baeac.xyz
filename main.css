@@ -262,6 +262,40 @@ hr { border: none;  height: var(--cardMargin); }
     transition: var(--transitionQuick);
 }
 
+.themeButton {
+    margin: 4px;
+    padding: var(--navigationButtonPadding);
+    
+    color: var(--textColor);
+    background-color: var(--darkBackgroundColor);
+    
+    border: var(--buttonBorder) transparent;
+    border-radius: var(--edgeRounding);
+    text-decoration: none;
+    
+    user-select: none;
+    
+    scale: 1.0;
+    transition: var(--transitionQuick);
+}
+
+.themeButton img {
+    height: var(--navigationIcon);
+    width: var(--navigationIcon);
+    filter: var(--iconFilter);
+}
+
+.themeButton:hover {
+    background-color: var(--hoverColor);
+    
+    border: var(--buttonBorder) var(--borderColor);
+    
+    cursor: pointer;
+    
+    scale: 1.08;
+    transition: var(--transitionQuick);
+}
+
 .siteSettings {
     position: absolute;
     right: 16px;
@@ -271,6 +305,10 @@ hr { border: none;  height: var(--cardMargin); }
     font-size: 1.3rem;
     line-height: 1;
     vertical-align: middle;
+}
+
+.landingPage {
+    mask-image: linear-gradient(#000000ff 0%, #000000dd 90%, #00000000 100%);
 }
 
 .siteNavigation {
@@ -580,13 +618,26 @@ hr { border: none;  height: var(--cardMargin); }
 
     .scrollToTop { display: none; }
 
+    .navigation {
+        display: flex;
+        justify-content: left;
+        padding-left: 0;
+    }
+
     .navigationBar {
-        width: 90vw;
-        position: fixed;
-        bottom: 16px;
-        background-color: var(--darkBackgroundColor);
-        padding: var(--cardPadding);
-        border: var(--cardBorder);
-        border-radius: var(--edgeRounding);
+        gap: 0px;
+    }
+
+    .navigationButton {
+        border-radius: 0;
+        margin: 4px 0;
+    }
+
+    .navigationButton:hover {
+        scale: 1;
+    }
+
+    .navigationButton:last-child {
+        border-radius: 0 var(--edgeRounding) var(--edgeRounding) 0;
     }
 }

@@ -148,6 +148,27 @@ header:hover h2 { letter-spacing: 0.2rem; transition: var(--transitionQuick); }
     mask-image: linear-gradient(#000000ff 0%, #000000dd 90%, #00000000 100%);
 }
 
+.viewerGreeting {
+    position: absolute;
+    top: 20%;
+    left: 3%;
+    z-index: -1;
+    text-align: center;
+    width: 40vw;
+}
+
+.viewerScroll {
+    display: none;
+    width: 40vw;
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    z-index: 0;
+    text-align: center;
+}
+
+
+
 .page {
     display: flex;
     width: 100%;

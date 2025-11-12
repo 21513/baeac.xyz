@@ -25,3 +25,17 @@ export function toggleScrollButton() {
         }
     }
 }
+
+export function toggleViewerMessage() {
+    const viewerHello = document.querySelector('.viewerGreeting');
+    const viewerScroll = document.querySelector('.viewerScroll');
+    const windowHeight = window.innerHeight;
+    
+    if (window.scrollY > 200) {
+        viewerScroll.style.display = 'grid';
+        viewerHello.style.display = 'none';
+    } else {
+        viewerScroll.style.display = 'none';
+        viewerHello.style.display = 'grid';
+    }
+}

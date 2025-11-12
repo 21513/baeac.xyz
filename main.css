@@ -616,7 +616,12 @@ hr { border: none;  height: var(--cardMargin); }
         max-width: 90vw;
     }
 
-    .scrollToTop { display: none; }
+    .scrollToTop {
+        position: fixed;
+        bottom: 16px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
 
     .navigation {
         display: flex;

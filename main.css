@@ -19,7 +19,7 @@
     --rowGap: 8px;
     --navigationButtonPadding: 8px 16px;
 
-    --navigationIcon: 20px;
+    --navigationIcon: 1.2rem;
     
     /* Border Radius */
     --edgeRounding: 2rem;
@@ -229,15 +229,20 @@ hr { border: none;  height: var(--cardMargin); }
 }
 
 .navigationButton {
+    display: flex;
+    align-items: center;
+
     margin: 4px;
     padding: var(--navigationButtonPadding);
-    
+    gap: var(--rowGap);
+
     color: var(--textColor);
     background-color: var(--darkBackgroundColor);
     
     border: var(--buttonBorder) transparent;
     border-radius: var(--edgeRounding);
     text-decoration: none;
+    text-align: center;
     
     user-select: none;
     
@@ -246,8 +251,8 @@ hr { border: none;  height: var(--cardMargin); }
 }
 
 .navigationButton img {
-    height: var(--navigationIcon);
     width: var(--navigationIcon);
+    height: var(--navigationIcon);
     filter: var(--iconFilter);
 }
 
@@ -618,31 +623,34 @@ hr { border: none;  height: var(--cardMargin); }
 
     .scrollToTop {
         position: fixed;
-        bottom: 16px;
+        bottom: calc(16px + calc(var(--navigationIcon) * 2.5));
         left: 50%;
         transform: translateX(-50%);
     }
 
-    .navigation {
-        display: flex;
-        justify-content: left;
-        padding-left: 0;
-    }
-
     .navigationBar {
-        gap: 0px;
+        position: fixed;
+        bottom: 0;
+        background-color: var(--darkBackgroundColor);
+        padding: var(--cardPadding);
+        border-radius: var(--outerBorderRadius) var(--outerBorderRadius) 0 0;
+        border: var(--cardBorder);
     }
 
     .navigationButton {
-        border-radius: 0;
-        margin: 4px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
     }
 
-    .navigationButton:hover {
-        scale: 1;
+    .navigationButton p {
+        display: none;
     }
 
-    .navigationButton:last-child {
-        border-radius: 0 var(--edgeRounding) var(--edgeRounding) 0;
+    .navigationButton img {
+        width: calc(var(--navigationIcon) * 1.2);
+        height: calc(var(--navigationIcon) * 1.2);
+        filter: var(--iconFilter);
     }
 }

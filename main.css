@@ -54,7 +54,7 @@
     --darkBackgroundColor: #101010;
     --grayBackgroundColor: #202020;
     --lightBackgroundColor: #303030;
-    --backgroundGradientDark: linear-gradient(var(--lightBackgroundColor), var(--darkBackgroundColor));
+    --backgroundGradientDark: linear-gradient(var(--grayBackgroundColor), var(--darkBackgroundColor));
     --cardBackgroundColor: #353535;
     --redirectButtonColor: #f0f0f0;
     --redirectButtonHover: #cecece;
@@ -65,14 +65,16 @@
 .themeDark {
     --socialLogoFilter: none;
     --iconFilter: none;
+    --greetingFilter: none;
     --textColor: #f0f0f0;
     --borderColor: #f0f0f0aa;
     --hoverColor: #404040;
     --accentColor: #0b910b;
     --highlightColor: #d0d0d030;
     --darkBackgroundColor: #101010;
+    --grayBackgroundColor: #202020;
     --lightBackgroundColor: #303030;
-    --backgroundGradientDark: linear-gradient(var(--lightBackgroundColor), var(--darkBackgroundColor));
+    --backgroundGradientDark: linear-gradient(var(--grayBackgroundColor), var(--darkBackgroundColor));
     --cardBackgroundColor: #353535;
     --redirectButtonColor: #f0f0f0;
     --redirectButtonHover: #cecece;
@@ -82,14 +84,16 @@
 .themeLight {
     --socialLogoFilter: invert();
     --iconFilter: invert();
+    --greetingFilter: invert();
     --textColor: #0f0f0f;
     --borderColor: #0f0f0f50;
     --hoverColor: #cacaca;
     --accentColor: #0b910b;
     --highlightColor: #2f2f2f30;
     --darkBackgroundColor: #cfcfcf;
+    --grayBackgroundColor: #dfdfdf;
     --lightBackgroundColor: #efefef;
-    --backgroundGradientDark: linear-gradient(var(--lightBackgroundColor), var(--darkBackgroundColor));
+    --backgroundGradientDark: linear-gradient(var(--grayBackgroundColor), var(--darkBackgroundColor));
     --cardBackgroundColor: #cacaca;
     --redirectButtonColor: #0f0f0f;
     --redirectButtonHover: #313131;
@@ -155,6 +159,7 @@ header:hover h2 { letter-spacing: 0.2rem; transition: var(--transitionQuick); }
     z-index: -1;
     text-align: center;
     width: 40vw;
+    filter: var(--greetingFilter);
 }
 
 .viewerScroll {
@@ -165,6 +170,7 @@ header:hover h2 { letter-spacing: 0.2rem; transition: var(--transitionQuick); }
     left: 10%;
     z-index: 0;
     text-align: center;
+    filter: var(--greetingFilter);
 }
 
 
@@ -740,5 +746,13 @@ header:hover h2 { letter-spacing: 0.2rem; transition: var(--transitionQuick); }
     .articleMedia img, .articleMedia video {
         width: 100%;
         height: auto;
+    }
+
+    .viewerGreeting {
+        display: none;
+    }
+
+    .viewerScroll {
+        display: none;
     }
 }

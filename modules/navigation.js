@@ -30,11 +30,14 @@ export function toggleViewerMessage() {
     const viewerHello = document.querySelector('.viewerGreeting');
     const viewerScroll = document.querySelector('.viewerScroll');
     
-    if (window.scrollY > 160) {
+    if (window.scrollY > 160 && window.innerWidth > 1024) {
         viewerScroll.style.display = 'grid';
         viewerHello.style.display = 'none';
-    } else {
+    } else if (window.scrollY <= 160 && window.innerWidth > 1024) {
         viewerScroll.style.display = 'none';
         viewerHello.style.display = 'grid';
+    } else {
+        viewerScroll.style.display = 'none';
+        viewerHello.style.display = 'none';
     }
 }

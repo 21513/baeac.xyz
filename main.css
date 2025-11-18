@@ -141,9 +141,6 @@ ol { margin-bottom: 1rem; }
 li { color: var(--textColor); margin-bottom: 0.5rem; }
 hr { border: none;  height: var(--cardMargin); }
 
-header h2 { transition: var(--transitionQuick); }
-header:hover h2 { letter-spacing: 0.2rem; transition: var(--transitionQuick); }
-
 /* Structural styles */
 
 .landingPage {
@@ -733,11 +730,6 @@ header:hover h2 { letter-spacing: 0.2rem; transition: var(--transitionQuick); }
         scale: 1;
     }
 
-    header h2:hover {
-        letter-spacing: normal;
-        transition: var(--transitionQuick);
-    }
-
     .articleCard {
         flex-direction: column;
         align-items: center;
@@ -754,5 +746,15 @@ header:hover h2 { letter-spacing: 0.2rem; transition: var(--transitionQuick); }
 
     .viewerScroll {
         display: none;
+    }
+
+    .siteSettings {
+        position: absolute;
+        right: 8px;
+    }
+
+    .themeButton {
+        margin: 2px;
+        padding: 8px;
     }
 }

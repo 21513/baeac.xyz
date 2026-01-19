@@ -9,6 +9,14 @@
         "imageUrl": "https://raw.githubusercontent.com/21513/Jellyfeatured/refs/heads/main/thumbnail.jpg",
         "versions": [
             {
+                "version": "0.0.3.0",
+                "changelog": "Updated appearance",
+                "targetAbi": "10.11.4.0",
+                "sourceUrl": "https://github.com/21513/Jellyfeatured/releases/download/v0.0.3.0/Jellyfeatured-v0.0.3.0.zip",
+                "checksum": "9fd85824c4eaf4f8c211e850ce4b1547",
+                "timestamp": "2026-01-19T21:29:56Z"
+            },
+            {
                 "version": "0.0.2.0",
                 "changelog": "Minor fixes and improvements",
                 "targetAbi": "10.11.4.0",

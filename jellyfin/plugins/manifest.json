@@ -89,7 +89,7 @@
         "overview": "Get recommendations on your Jellyfin home page based on your viewing history and what's popular.",
         "owner": "baeac",
         "category": "General",
-        "imageUrl": "",
+        "imageUrl": "https://raw.githubusercontent.com/21513/Reviewer/refs/heads/main/thumbnail.jpg",
         "versions": [
             {
                 "version": "0.0.2.2",
